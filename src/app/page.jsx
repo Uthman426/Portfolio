@@ -1,10 +1,24 @@
 import Image from "next/image";
-import Navs from "@/Components/Navbars";
+import HeroTyping from "@/Components/Typewriterloop";
+import StatsBar from "@/Components/Workstats";
+import ProjectsSection from "@/Components/Project-section";
 
 export default function Home() {
   return (
-      <div>
-        < Navs/>
+      <div className="bg-black">
+        <section>
+
+        
+         <HeroTyping /> 
+         <StatsBar /> 
+         </section>
+         <section>
+
+         </section>
+         <section>
+           <ProjectsSection />  
+         </section>
+         
       </div>
   );
 }
