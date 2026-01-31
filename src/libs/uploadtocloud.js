@@ -2,6 +2,10 @@ export async function uploadToCloudinary(file) {
   const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
   const preset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
 
+  if (!cloudName || !preset) {
+    throw new Error("Missing Cloudinary env vars. Check .env.local and restart dev server.");
+  }
+
   const formData = new FormData();
   formData.append("file", file);
   formData.append("upload_preset", preset);
@@ -11,8 +15,13 @@ export async function uploadToCloudinary(file) {
     body: formData,
   });
 
-  if (!res.ok) throw new Error("Image upload failed");
+  const data = await res.json().catch(() => ({}));
 
-  const data = await res.json();
+  if (!res.ok) {
+    // Cloudinary usually returns { error: { message: "..." } }
+    const msg = data?.error?.message || data?.message || "Unknown Cloudinary error";
+    throw new Error(`Cloudinary upload failed: ${msg}`);
+  }
+
   return data.secure_url;
 }

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/libs/mongodb";
-import Projects from "@/models/projectsuploads";
+import Project from "@/models/projectsuploads";
 import Settings from "@/models/yearsofexperience";
 
 export async function GET() {
