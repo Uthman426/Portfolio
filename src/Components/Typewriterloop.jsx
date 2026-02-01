@@ -58,7 +58,7 @@ export default function HeroTyping() {
                             bg-clip-text text-transparent">Hello i'm
                     </h1>
                     <div className="h-12 mb-3">
-                        <p className="text-white text-3xl lg:text-4xl font-bold">{text}</p>
+                        <p className="text-white text-3xl sm:mb-2 lg:text-4xl font-bold">{text}</p>
                     </div>
 
                     <p className="text-gray-400 text-base sm:text-lg lg:text-xl mb-10 lg:mb-14 leading-relaxed">Unleash the power of cutting-edge technology, seamless design,
