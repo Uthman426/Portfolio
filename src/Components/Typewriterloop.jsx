@@ -50,14 +50,14 @@ export default function HeroTyping() {
     }, [text, isDeleting, wordIndex]);
 
     return (
-        <div className="mx-auto pt-15 pl-2 w-[90%] lg:pt-16">
+        <div className="mx-auto pt-14 pl-2 lg:pt-16">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-20">
                 <div className="w-full lg:w-[60%]">
                     <h1 className="text-3xl font-semibold bg-gradient-to-tr
                             from-blue-700 via-orange-700 to-blue-700
                             bg-clip-text text-transparent">Hello i'm
                     </h1>
-                    <div className="h-12 mb-3">
+                    <div className="min-h-[3.2rem] sm:min-h-[3.6rem] mt-2 mb-2">
                         <p className="text-white text-3xl sm:mb-2 lg:text-4xl font-bold">{text}</p>
                     </div>
 
@@ -66,29 +66,30 @@ export default function HeroTyping() {
                         with a developer who not only understands the language of
                         the web but also speaks the language of your brand.</p>
 
-                    <div className="flex flex-wrap gap-4 ">
+                    <div className=" flex flex-col sm:flex-row gap-4 sm:items-center">
 
-                        <button 
-                        
-                        className="
-                            px-6 py-3 rounded-full text-white font-medium
-                            bg-gradient-to-tl
-                            from-blue-700 via-orange-700 to-blue-700
-                          ">
+                        <a
+                            href="mailto:uthmanolaleke@gmail.com? subject=Hiring"
+                            className="
+    inline-block px-6 py-3 rounded-full text-white text-center font-medium
+    bg-gradient-to-tl
+    from-blue-700 via-orange-700 to-blue-700
+  "
+                        >
                             Hire Me
-                        </button>
+                        </a>
 
-                        <a href="/UTHMAN_ADEOYE_OLALEKE_CV.pdf" download className="inline-block">
-                <span
-            className="inline-flex p-[2px] rounded-full
+                        <a href="/UTHMAN_ADEOYE_OLALEKE_CV midoEd.pdf" download className=" w-full sm:w-auto ">
+                            <span
+                                className="inline-flex w-full p-[2px] rounded-full
             bg-gradient-to-tl from-blue-700 via-orange-700 to-blue-700"
-          >
-            <span className="px-7 py-3 rounded-full bg-black text-white font-medium">
-              Download CV
-            </span>
-          </span>
-        </a> 
- </div>
+                            >
+                                <span className="px-6 w-full py-3 text-center rounded-full bg-black text-white font-medium">
+                                    Download CV
+                                </span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
 
 

@@ -33,7 +33,7 @@ export default function ProjectsSection() {
   return (
     <section className="w-full px-6 md:px-16 py-12 bg-black text-white">
       <div className="w-[90%] mx-auto ">
-      <h1 className="text-4xl font-bold mx-auto w-[25%] mb-10 sm:w-[30%]">My Projects</h1>
+      <h1 className="text-4xl font-bold mb-10 mx-auto w-fit ">My Projects</h1>
       <div className="flex items-center justify-center gap-4 mb-10">
         
         {tabs.map((t) => {

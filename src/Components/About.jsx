@@ -40,22 +40,22 @@ export default function About(){
   }, [skillInfo, activeTab]);
     return(
         <div>
-            <div className="flex justify-between">
-                <div>
-                  <div>
-                    <div>
-                        <img src="/images/My-profile-image.jpg" alt="profile image" />
+            <div className="flex flex-col lg:flex-row justify-between mb-15 ">
+                
+                  <div className="w-full lg:w-[40%] flex justify-center lg:justify-end sm:mb-10 ">
+                    <div className="rounded-full bg-[#1b263a] p-6 sm:p-8 ">
+                        <img src="/images/My-profile-image.jpg" className="rounded-full w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover" alt="profile image" />
                     </div>
                   </div>
-                </div>
-                <div className="w-[50%] text-white">
+                
+                <div className=" text-white w-full lg:w-[50%] ">
                     <header>
-                        <h1 className="text-white text-4xl font-bold mb-5">
+                        <h1 className="text-white text-3xl px-4  lg:text-4xl font-bold mb-5">
                         About Me
                      </h1>
                     </header>
                      
-                     <p className=" text-lg">
+                     <p className=" text-lg px-4">
                         I am a full stack web developer with a passion for 
                         creating interactive and responsive web applications.
                          I have experience working with JavaScript, React, Redux,
@@ -73,8 +73,8 @@ export default function About(){
                 <button
                   key={t.key}
                   onClick={() => setActiveTab(t.key)}
-                  className={`px-6 py-2 rounded-full border transition
-                    ${isActive ? "border-white text-white" : "border-zinc-700 text-slate-300 hover:border-zinc-500"}
+                  className={`px-6 py-2   transition
+                    ${isActive ? "border-white text-white" : " text-slate-600 hover:border-zinc-500"}
                   `}
                 >
                   {t.label}
