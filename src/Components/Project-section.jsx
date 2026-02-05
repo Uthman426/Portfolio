@@ -102,7 +102,11 @@ export default function ProjectsSection() {
               </div>
             </div>
           ))}
+          <div>
+            <button>+</button>
+          </div>
         </div>
+        
       )}
       </div>
     </section>
