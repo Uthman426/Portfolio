@@ -103,7 +103,7 @@ export default function ProjectsSection() {
             </div>
           ))}
           <div>
-            <button>+</button>
+            <button onClick={()=>Router.push("/admin")} className="text-white p-4">+</button>
           </div>
         </div>
         
