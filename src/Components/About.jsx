@@ -40,7 +40,7 @@ export default function About(){
   }, [skillInfo, activeTab]);
     return(
         <div>
-            <div className="flex flex-col lg:flex-row justify-between mb-15 ">
+            <div className="flex flex-col lg:flex-row justify-between">
                 
                   <div className="w-full lg:w-[40%] flex justify-center lg:justify-end sm:mb-10 ">
                     <div className="rounded-full bg-[#1b263a] p-6 sm:p-8 ">
